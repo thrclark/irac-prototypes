@@ -56,23 +56,23 @@
                                     <fieldset>
                                         <legend>General</legend>
                                         <div class="form-group ">
-                                            <label class="control-label" for="asdf"> Label</label>
+                                            <label class="control-label" for="pool_label"> Label</label>
                                             <span class="help-block small">A name for this Resource Pool, used as a label to uniquely identify it</span>
-                                            <input class="form-control" id="asdf" name="asdf" type="text" placeholder="" required="required">
+                                            <input name="pool_label" type="text" required="required" class="form-control" id="pool_label" placeholder="">
                                         </div>
                                         <div class="form-group ">
-                                            <label class="control-label" for="asdf"> Organization </label>
+                                            <label class="control-label" for="organization"> Organization </label>
                                             <span class="help-block small">The organization that owns the Resource Pool</span>
                                             <select name="organization" aria-labelledby="organization-label" aria-describedby="organization-help" type="select" id="organization" class="form-control">
-                                                <option value="">Select...</option>
+                                                <option value="" selected="selected">Select...</option>
                                                 <option value="/organizations/d730dd24-c175-4d47-8acb-bcf703b40487">One.IU Team</option>
                                             </select>
                                         </div>
                                         <div class="form-group ">
-                                            <label class="control-label" for="asdf"> Data Center </label>
+                                            <label class="control-label" for="datacenter"> Data Center </label>
                                             <span class="help-block small">The data center where the Resource Pool will reside</span>
-                                            <select name="dataCenter" aria-labelledby="dataCenter-label" aria-describedby="dataCenter-help" type="select" id="dataCenter" class="form-control">
-                                                <option value="">Select...</option>
+                                            <select name="dataCenter" aria-labelledby="dataCenter-label" aria-describedby="dataCenter-help" type="select" id="datacenter" class="form-control">
+                                                <option value="" selected="selected">Select...</option>
                                                 <option value="BL">Bloomington</option>
                                                 <option value="IN">Indianapolis</option>
                                             </select>
@@ -81,57 +81,60 @@
                                     <fieldset>
                                         <legend>Resources</legend>
                                         <div class="form-group ">
-                                            <label class="control-label" for="asdf"> Number of CPUs Allocated</label>
+                                            <label class="control-label" for="cpus"> Number of CPUs</label>
                                             <span class="help-block small">The highest number of CPUs that will be allocated across all VMs in the Resource Pool (min: 1, max: 100)</span>
                                             <div class="row">
                                                 <div class="col-xs-3">
-                                                    <input type="number" min="1" max="100" name="cpus" value="" aria-labelledby="cpus-label" aria-describedby="cpus-help" id="cpus" class="form-control">
+                                                    <input name="cpus" type="number" class="form-control" id="cpus" max="100" min="1" aria-describedby="cpus-help" aria-labelledby="cpus-label">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="form-group ">
-                                            <label class="control-label" for="asdf"> Storage (in TB) </label>
+                                            <label class="control-label" for="storage"> Storage (in TB) </label>
                                             <span class="help-block small">The highest amount of storage space (in TB) that will be allocated across all VMs in the Resource Pool (min: 1TB)</span>
                                             <div class="row">
                                                 <div class="col-xs-3">
-                                                    <input type="number" step="any" min="0" name="storage" value="" aria-labelledby="storage-label" aria-describedby="storage-help" id="storage" class="form-control">
+                                                    <input name="storage" type="number" class="form-control" id="storage" min="0" step="any" aria-describedby="storage-help" aria-labelledby="storage-label">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="form-group ">
-                                            <label class="control-label" for="asdf"> Memory (in GB) </label>
+                                            <label class="control-label" for="memory"> Memory (in GB) </label>
                                             <span class="help-block small">The highest amount of memory (in GB) that will be allocated across all VMs in the Resource Pool (min: 1GB, max: 256GB)</span>
                                             <div class="row">
                                                 <div class="col-xs-3">
-                                                    <input type="number" step="any" min="0" name="storage" value="" aria-labelledby="storage-label" aria-describedby="storage-help" id="storage" class="form-control">
+                                                    <input name="memory" type="number" class="form-control" id="memory" min="0" step="any" aria-describedby="memory-help" aria-labelledby="memory-label">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="form-group ">
-                                            <label class="control-label" for="asdf"> VLAN IDs</label>
+                                            <label class="control-label" for="vlan"> VLAN IDs</label>
                                             <span class="help-block small">A comma-separated list of VLAN IDs to which the Resource Pool can connect</span>
-                                            <input type="number" min="1" max="100" name="cpus" value="" aria-labelledby="cpus-label" aria-describedby="cpus-help" id="cpus" class="form-control">
+                                            <input name="cpvlanus" type="text" class="form-control" id="vlan" max="100" min="1" aria-describedby="cpus-help" aria-labelledby="vlan-label">
                                         </div>
                                         <div class="form-group">
                                             <label for="dataProtection" class="control-label">Data Protection</label>
                                             <div class="checkbox">
                                                 <label>
-                                                    <input type="checkbox" id="dataProtection" name="dataProtection" value="true">
-                                                    <!-- react-text: 278 -->Yes, backup all storage with CommVault. <!-- /react-text --><a href="https://kb.iu.edu/d/acvp" target="_blank">(more info)</a></label>
+                                                    <input name="dataProtection" type="checkbox" id="dataProtection" value="true" checked="checked" disabled>
+                                                    <!-- react-text: 278 -->
+                                                    Yes, backup all storage with CommVault.
+                                                    <!-- /react-text -->
+                                                    <a href="https://kb.iu.edu/d/acvp" target="_blank" class="small">(more info)</a></label>
                                             </div>
                                         </div>
                                     </fieldset>
                                     <fieldset>
                                         <legend>Billing Details</legend>
                                         <div class="form-group ">
-                                            <label class="control-label" for="asdf"> Account</label>
+                                            <label class="control-label" for="account"> Account</label>
                                             <span class="help-block small">The account to which this Resource Pool will be billed</span>
-                                            <input class="form-control" id="asdf" name="asdf" type="text" placeholder="" required="required">
+                                            <input name="account" type="text" required="required" class="form-control" id="account" placeholder="">
                                         </div>
                                         <div class="form-group ">
-                                            <label class="control-label" for="asdf"> Sub-Account</label>
+                                            <label class="control-label" for="subaccount"> Sub-Account</label>
                                             <span class="help-block small">(Optional) The sub-account to which this Resource Pool will be billed</span>
-                                            <input class="form-control" id="asdf" name="asdf" type="text" placeholder="" required="required">
+                                            <input name="subaccount" type="text" required="required" class="form-control" id="subaccount" placeholder="">
                                         </div>
                                     </fieldset>
                                 </div>
