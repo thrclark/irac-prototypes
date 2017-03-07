@@ -1,3 +1,9 @@
+
+body {
+  background-color: @bodybackground;
+}
+
+
 #branding-bar {
   .navbar-text {
     .pull-right;
@@ -8,202 +14,65 @@
 }
 
 
-header {
-  background: #EEEDEB;
-  margin-bottom: 20px;
-  h1 {
-    margin-top: 6px;
-    font-size: 30px;
-  }
-  .navbar-text {
-    .pull-right;
-  }
+.help-block {
+  margin-top: -5px;
 }
 
-.lead {
-  margin-bottom: 5px;
-  padding-bottom: 5px;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  -ms-word-break: break-all;
-  word-break: break-all;
-  word-break: break-word;
-  -ms-hyphens: auto;
-  -moz-hyphens: auto;
-  -webkit-hyphens: auto;
-  hyphens: auto;
 
-}
 
-.search {
-  .checkbox-inline{
-    margin-bottom: 15px;
-  }
-  .well.well-sm {
-    border-top: none;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    .input-group {
-      .form-control {
-        border-right: none;
+.view-admin {
+  .main-content {
+    .primary-content {
+      margin-top: -20px;
+      min-height: 600px;
+      .well;
+      background-color: @vfy-card-background;
+      .section-head {
+        margin-bottom: 15px;
+        .section-header {
+          .h3 {
+            margin-top: 0px;
+          }
+        }
+        .section-controls{
+          .text-right}
       }
-      .input-group-btn {
-        .btn.btn-default {
-          background-color: #ffffff;
-          //background: transparent;
-          border-left: none;
+    }
+  }
+}
+@media (max-width: @screen-sm-max) {
+  .view-admin {
+    .main-content {
+      .primary-content {
+        margin-top: 0px;
+        min-height: inherit;
+        .well;
+        background-color: @vfy-card-background;
+        .section-head {
+          margin-bottom: 15px;
+          .section-header {
+            .h3 {
+              margin-top: 0px;
+            }
+          }
         }
       }
     }
   }
-  .nav-tabs.nav-justified > li {
-    display: table-cell;
-    width: 1%;
-  }
-  .nav-tabs > li > a {
-    margin-bottom: 0px;
-    border-bottom: 1px solid #ddd;
-  }
-  .nav-tabs > li.active > a {
-    background-color: #f5f5f5;
-    &:hover {
-      background-color: #f5f5f5;
-    }
-    &:focus {
-      background-color: #f5f5f5;
-    }
-  }
-  .nav-tabs.nav-justified > .active > a {
-    border-bottom-color: whitesmoke;
-    &:hover {
-      border-bottom-color: whitesmoke;
-    }
-    &:focus {
-      border-bottom-color: whitesmoke;
-    }
-  }
-  .nav-tabs.nav-justified {
-    margin-bottom: -1px;
-  }
 }
-
-.search-results {
-  min-height: 400px;
-
-
-
-  hr {
-    margin-bottom: 5px;
-    margin-top: 0px;
-  }
-
-
-
-
-
-
-  dl {
-
-    dt {
+@media (max-width:@screen-xs-max) {
+  .view-admin {
+    .main-content {
       width: 100%;
-      max-width: 35%;
-      padding-bottom: 10px;
-      float: left;
-      clear: both;
-      position: relative;
-      &:before {
-        background-color: #dddddd;
-        content: "";
-        height: 1px;
-        left: 0px;
-        bottom: 5px;
-        position: absolute;
-        width: 280%;
-
-      }
-      &:first-child {
-        before {
-          content: none;
-        }
-      }
-    }
-
-    dd {
-      width: 100%;
-      max-width: 65%;
-      //padding: 15px;
-      float: right;
-      clear: right;
-      position: relative;
-      margin-bottom: 10px;
-      overflow-wrap: break-word;
-      word-wrap: break-word;
-      -ms-word-break: break-all;
-      word-break: break-all;
-      word-break: break-word;
-      -ms-hyphens: auto;
-      -moz-hyphens: auto;
-      -webkit-hyphens: auto;
-      hyphens: auto;
-    }
-
-  }
-  ul {
-    li{
-      padding-bottom: 5px;
-      padding-top: 5px;
-      overflow-wrap: break-word;
-      word-wrap: break-word;
-      -ms-word-break: break-all;
-      word-break: break-all;
-      word-break: break-word;
-      -ms-hyphens: auto;
-      -moz-hyphens: auto;
-      -webkit-hyphens: auto;
-      hyphens: auto;
-    }
-  }
-}
-
-@media (min-width: @screen-sm-min) {
-
-  .search-results {
-    dl {
-      dt {
-        &:before {
-          width: 720px;
+      .primary-content {
+        .well;
+        background-color: @vfy-card-background;
+        .section-head {
+          .section-controls{
+            .text-left}
         }
       }
     }
   }
-}
 
-@media (min-width: @screen-md-min) {
-
-  .search-results {
-    border-left: solid 1px #dddddd;
-    min-height: 400px;
-    padding-left: 30px;
-    dl {
-      dt {
-        &:before {
-          width: 587px;
-        }
-      }
-    }
-  }
-}
-
-@media (min-width: @screen-lg-min) {
-
-  .search-results {
-    
-    dl {
-      dt {
-        &:before {
-          width: 720px;
-        }
-      }
-    }
-  }
 }
