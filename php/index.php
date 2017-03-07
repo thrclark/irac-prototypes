@@ -8,11 +8,11 @@
 <link href="https://fonts.iu.edu/style.css?family=BentonSans:regular,bold|BentonSansCond:regular|GeorgiaPro:regular" media="screen" rel="stylesheet" type="text/css"/>
 <style>
 .tooltip-inner {
-	text-align:left;
-	padding:10px;
-	max-width:300px;}
+	text-align: left;
+	padding: 10px;
+	max-width: 300px;
+}
 </style>
-
 </head>
 <body id="top" class="view-admin">
 <div class="wrapper">
@@ -23,7 +23,6 @@
                 <div class="col-xs-12">
                     <h1 style="margin-top:11px; color:#ffffff; font-size:32px">Infrastructure Resource Allocation Center</h1>
                 </div>
-            
             </div>
         </div>
     </header>
@@ -140,7 +139,7 @@
                                     <div class="well well-sm" id="summary">
                                         <table class="table table-condensed small">
                                             <caption>
-                                      Summary
+                                            Summary
                                             </caption>
                                             <thead class="sr-only">
                                                 <tr>
@@ -177,10 +176,6 @@
                                 </div>
                             </div>
                             <div class="clearfix"></div>
-                            
-                        
-
-
                             <hr>
                             <div class="text-right"> <a href="" class="btn btn-default" data-toggle="modal" data-target="#confirm_exit">Cancel</a> <a href="" class="btn btn-primary" data-toggle="modal" data-target="#confirm_save">Save</a> </div>
                         </section>
@@ -195,19 +190,17 @@
 <script type="text/javascript" src="../js/bootstrap.min.js"></script> 
 <script type="text/javascript" src="../js/jquery.sticky.js"></script> 
 <script>
-    $(window).load(function(){
-      $("#summary").sticky({ topSpacing: 20 });
+    $(window).load(function() {
+        $("#summary").sticky({
+            topSpacing: 20
+        });
     });
-	
-	
-	$(function () {
-  $('[data-toggle="popover"]').popover()
-})
-
-$(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-})
-
-  </script>
+    $(function() {
+        $('[data-toggle="popover"]').popover()
+    })
+    $(function() {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>
 </body>
 </html>
